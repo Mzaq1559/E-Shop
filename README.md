@@ -3,7 +3,7 @@
 A simple, responsive **frontend for an online shopping website** built using HTML, CSS, and Bootstrap. This project showcases product pages, policy pages, and a fully navigable e-commerce interface.
 
 ## 📂 Project Structure
-
+```bash
 E-Shop/
 ├─ index.html # Home page
 ├─ about.html # About page
@@ -17,7 +17,7 @@ E-Shop/
 ├─ bootstrap.css # Bootstrap framework CSS
 ├─ pictures/ # Folder containing product and asset images
 └─ README.md # Project documentation
-
+```
 ## ⚡ Features
 
 - Responsive layout using **Bootstrap 5**
@@ -55,5 +55,14 @@ start index.html    # Windows
 open index.html     # macOS
 xdg-open index.html # Linux
 ```
+## 🚀 Next Steps / Future Enhancements
 
-4.
+Convert to React.js or Vue.js for dynamic functionality
+
+Connect to a backend API for products and cart management
+
+Add a shopping cart and checkout process
+
+Implement search and filtering options
+
+Add authentication and payment integration
