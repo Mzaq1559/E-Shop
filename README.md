@@ -43,3 +43,17 @@ E-Shop/
 
 ```bash
 git clone https://github.com/Mzaq1559/E-Shop.git
+```
+
+2. Navigate to the project folder:
+```bash
+cd E-Shop
+```
+3.Open index.html in your preferred browser:
+```bash
+start index.html    # Windows
+open index.html     # macOS
+xdg-open index.html # Linux
+```
+
+4.
