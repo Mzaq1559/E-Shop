@@ -1,87 +1,76 @@
-<<<<<<< HEAD
-# E-Shop Frontend
+# E-Shop React Application
 
-A simple, responsive **frontend for an online shopping website** built using HTML, CSS, and Bootstrap. This project showcases product pages, policy pages, and a fully navigable e-commerce interface.
+A fully functional, responsive e-commerce platform rebuilt using **React.js** and **Vite**. This project mimics a real-world shopping experience with features like product browsing, cart management, simulated user authentication, and an administrative dashboard.
 
-## 📂 Project Structure
-```bash
-E-Shop/
-├─ index.html # Home page
-├─ about.html # About page
-├─ contact.html # Contact page
-├─ questions.html # FAQs / Questions page
-├─ shipping_policy.html # Shipping policy page
-├─ privacy_policy.html # Privacy policy page
-├─ refund_policy.html # Refund policy page
-├─ terms_conditions.html # Terms and conditions page
-├─ style.css # Main CSS file
-├─ bootstrap.css # Bootstrap framework CSS
-├─ pictures/ # Folder containing product and asset images
-└─ README.md # Project documentation
-```
 ## ⚡ Features
 
-- Responsive layout using **Bootstrap 5**
-- Multiple pages including:
-  - Home
-  - About
-  - Contact
-  - FAQs
-  - Policies (Shipping, Refund, Privacy, Terms & Conditions)
-- Static product showcase with images
-- Easy navigation between pages
-- Ready to integrate with backend for dynamic e-commerce functionality
+### 🛍️ Customer Features
+- **Dynamic Product Browsing**: Filter products by category on the Shop page.
+- **Shopping Cart**: Add/remove items, adjust quantities, and view live total calculations.
+- **User Authentication (Simulated)**: Login and Sign Up functionality (persisted via Local Storage).
+- **Responsive Design**: Fully responsive layout using **React Bootstrap**.
+- **Information Pages**: About Us, Contact Us, and FAQs.
+
+### 👨‍💻 Admin Features
+- **Admin Dashboard**: Accessible via `admin@eshop.com`.
+- **Product Management**: Add new products with image URLs and prices.
+- **Delete Products**: Remove items from the store.
+- **Statistics**: View total products and simulated sales data.
 
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- Bootstrap 5
+- **Frontend**: React.js, Vite
+- **Styling**: Bootstrap 5, React Bootstrap, Custom CSS
+- **Routing**: React Router DOM
+- **State Management**: React Context API
+- **Icons**: FontAwesome, Bootstrap Icons
 
-## 📌 How to Run
-
-1. Clone the repository:
+## 📂 Project Structure
 
 ```bash
-git clone https://github.com/Mzaq1559/E-Shop.git
+E-Shop/
+├─ public/           # Static assets (images)
+├─ src/
+│  ├─ components/    # Reusable UI components (Navbar, Footer, ProductCard)
+│  ├─ context/       # Global State (ShopContext)
+│  ├─ data/          # Initial product data
+│  ├─ pages/         # Page components (Home, Shop, Cart, AdminDashboard)
+│  ├─ App.jsx        # Main application component with Routing
+│  └─ main.jsx       # Entry point
+└─ index.html        # HTML entry
 ```
 
-2. Navigate to the project folder:
-```bash
-cd E-Shop
-```
-3.Open index.html in your preferred browser:
-```bash
-start index.html    # Windows
-open index.html     # macOS
-xdg-open index.html # Linux
-```
-## 🚀 Next Steps / Future Enhancements
+## 🚀 How to Run
 
-Convert to React.js or Vue.js for dynamic functionality
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Mzaq1559/E-Shop.git
+    cd E-Shop
+    ```
 
-Connect to a backend API for products and cart management
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-Add a shopping cart and checkout process
+3.  **Start the Development Server:**
+    ```bash
+    npm run dev
+    ```
 
-Implement search and filtering options
+4.  **Open the App:**
+    Click the URL shown in the terminal (usually `http://localhost:5173`).
 
-Add authentication and payment integration
-=======
-# React + Vite
+## 🔑 Admin Access (Demo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To test the Admin Panel:
+1.  Click **Login** in the navbar.
+2.  Email: `admin@eshop.com`
+3.  Password: (Any password works)
+4.  Go to **Hello, Admin > Admin Dashboard**.
 
-Currently, two official plugins are available:
+## 🔮 Future Enhancements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 089bb80 (Initial commit of E-Shop React App with Admin Panel)
+- Integrate a real backend (Node.js/Express or Firebase).
+- Implement real payment processing (Stripe/PayPal).
+- Add user order history.
