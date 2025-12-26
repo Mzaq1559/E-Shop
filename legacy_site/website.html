@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+    class="navbar navbar-expand-lg navbar_background" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#"><img src="pictures/logo.jpg"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="website.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu mp">
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box1"</a>Consumer electronics.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box2"</a>Health and beauty.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box3"</a>Food and beverage.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box4"</a>Furniture and decor.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box5"</a>Apparel and accessories.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box6"</a>Clothes and Cosmetics</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box7"</a>Books, movies, music, and games</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#box8"</a>Sports items</a></li>
+              </ul>
+            </li>           
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="questions.html">FAQs</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signInModal">Login</button>
+          <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</button>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">
+              Search
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MODALS -->
+
+    <!-- SIGN IN MODAL -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signInModalLabel">Login to E-Shop</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="emailSignIn" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailSignIn" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="passwordSignIn" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordSignIn" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="btn btn-outline-dark w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpModalLabel">Sign Up for E-Shop</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nameSignUp" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="nameSignUp" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="emailSignUp" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailSignUp" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="passwordSignUp" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordSignUp" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="btn btn-outline-dark w-100">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pictures/carousel1.jpg" class="d-block w-100" style="height: 360px; object-fit: cover;" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img src="pictures/carousel2.jpg" class="d-block w-100" style="height: 360px; object-fit: cover;" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img src="pictures/carousel3.jpg" class="d-block w-100" style="height: 360px; object-fit: cover;" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- SHOP SECTION -->
+    <div class="shop_section">
+        <div class=" box">
+            <div class="box_content">
+                <h5>Consumer electronics</h5>
+            <div class="box_img" style="background-image: url(pictures/s1.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+              See more
+            </button>
+            </div>
+        </div>
+        
+        <div class="box2 box">
+            <div class="box_content">
+                <h5>Health and beauty.</h5>
+            <div class="box_img" style="background-image: url(pictures/s2.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+              See more
+            </button>
+            </div>
+        </div>
+
+        <div class="box3 box">
+            <div class="box_content">
+                <h5>Food and beverage.</h5>
+            <div class="box_img" style="background-image: url(pictures/s3.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+              See more
+            </button>
+            </div>
+        </div>
+
+        <div class="box4 box">
+            <div class="box_content">
+                <h5>Furniture and decor.</h5>
+            <div class="box_img" style="background-image: url(pictures/s4.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+              See more
+            </button>
+            </div>
+        </div>
+
+        <div class="box5 box">
+            <div class="box_content">
+                <h5>Apparel and accessories.</h5>
+            <div class="box_img" style="background-image: url(pictures/s5.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+              See more
+            </button>
+            </div>
+        </div>
+        
+        <div class="box6 box">
+            <div class="box_content">
+                <h5>Clothes and Cosmetics</h5>
+            <div class="box_img" style="background-image: url(pictures/s6.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+              See more
+            </button>
+            </div>
+        </div>
+
+        <div class="box7 box">
+            <div class="box_content">
+                <h5>Books, movies, music, and games</h5>
+            <div class="box_img" style="background-image: url(pictures/s7.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+              See more
+            </button>
+            </div>
+        </div>
+
+        <div class="box8 box">
+            <div class="box_content">
+                <h5>Sports items</h5>
+            <div class="box_img" style="background-image: url(pictures/s8.jpg);"></div>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+              See more
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS OF ALL CATEGORIES -->
+
+    <!-- CONSUMER ELECTRONICS -->
+    <div class="modal fade" id="box1" tabindex="-1" aria-labelledby="box1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Consumer Electronics</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                <div class="box_content">
+                      <h5>Apple AirPods Pro</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>Samsung Neo QLED 8K TV</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>Apple iPhone 15 Pro</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Microsoft Xbox Series X</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>Canon EOS R5 Camera</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>Ring Video Doorbell Pro</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>LG Dual Inverter AC</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>Google Pixel 8 Pro</h5>
+                  <div class="box1_img" style="background-image: url(pictures/1h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEALTH AND BEAUTY -->
+    <div class="modal fade" id="box2" tabindex="-1" aria-labelledby="box2" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Health and Beauty</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>CeraVe Hydrating Facial Cleanser</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>Olaplex No. 3 Hair Perfector</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>Batiste Dry Shampoo</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Braun Series 7 Electric Shaver</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>Tylenol Extra Strength Caplets</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>Philips Norelco Multigroom 7000</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>Axe Phoenix Body Spray</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>Jack Black Double-Duty Face Moisturizer</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOD AND BEVERAGE -->
+    <div class="modal fade" id="box3" tabindex="-1" aria-labelledby="box3" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Food and beverage</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>Kraft Macaroni & Cheese</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>Kind Protein Bars</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>Coca-Cola Classic</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Red Bull Energy Drink</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>Philadelphia Cream Cheese</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>DiGiorno Frozen Pizza</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>Hormel Chili with Beans</h5>
+                  <div class="box1_img" style="background-image: url(pictures/3g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>Heinz Tomato Ketchup</h5>
+                  <div class="box1_img" style="background-image: url(pictures/2h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FURNITURE AND DECOR -->
+    <div class="modal fade" id="box4" tabindex="-1" aria-labelledby="box4" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Furniture and decor</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>IKEA EKTORP Sofa</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>Zinus SmartBase Platform Bed</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>CB2 Round Marble Bistro Table</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Steelcase Series 1 Task Chair</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>YITAHOME Patio Umbrella</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>Wayfair Mercury Glass Floor Lamp</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>CanvasPop Custom Canvas Prints</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>Safavieh Vintage Collection Rug</h5>
+                  <div class="box1_img" style="background-image: url(pictures/4h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPAREL AND ACCESSORIES -->
+    <div class="modal fade" id="box5" tabindex="-1" aria-labelledby="box5" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Apparel and Accessories</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>Ralph Lauren Polo Shirt</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>H&M Ribbed Knit Dress</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>The North Face Puffer Jacket</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Nike Air Force 1 Sneakers</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>Coach Leather Crossbody Bag</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>Pandora Charm Bracelets</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>Daniel Wellington Classic Watch</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>New Era 59FIFTY Fitted Cap</h5>
+                  <div class="box1_img" style="background-image: url(pictures/5h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLOTHES AND COSMETICS -->
+    <div class="modal fade" id="box6" tabindex="-1" aria-labelledby="box6" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Clothes and Cosmetics</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>Levi’s 501 Original Fit Jeans</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>Tommy Hilfiger Polo Shirt</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>Champion Reverse Weave Hoodie</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>CeraVe Hydrating Facial Cleanser</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>Drunk Elephant T.L.C. Sukari Babyfacial</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>MAC Studio Fix Powder Foundation</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>Moroccanoil Treatment Oil</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>OPI Nail Lacquer</h5>
+                  <div class="box1_img" style="background-image: url(pictures/6h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKS, MOVIES, MUSIC AND GAMES -->
+    <div class="modal fade" id="box7" tabindex="-1" aria-labelledby="box7" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Books,Movies,Music and Games</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>"Abbey Road" by The Beatles</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>"1989" by Taylor Swift</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>"Rolling in the Deep" by Adele</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>"Stay" by Rihanna ft. Mikky Ekko</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>"Red Dead Redemption 2"</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>"The Witcher 3: Wild Hunt"</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>"Persona 5"</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>"Circe" by Madeline Miller</h5>
+                  <div class="box1_img" style="background-image: url(pictures/7h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPORTS ITEMS -->
+    <div class="modal fade" id="box8" tabindex="-1" aria-labelledby="box8" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Sports Items</h1>
+            <a href="#"><i class="fa-solid fa-cart-arrow-down fa-2x float-start"></i></a>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="shop_section1">
+              <div class="box1 box1">
+                  <div class="box_content">
+                      <h5>Peloton Bike</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8a.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box1">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box2 box1">
+                  <div class="box_content">
+                      <h5>NordicTrack Treadmill</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8b.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box2">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box3 box1">
+                  <div class="box_content">
+                      <h5>Reebok CrossFit Shorts</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8c.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box3">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box4 box1">
+                  <div class="box_content">
+                      <h5>Wilson NFL MVP Football</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8d.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box4">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box5 box1">
+                  <div class="box_content">
+                      <h5>HEAD Speed Tennis Racket</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8e.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box5">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+              
+              <div class="box6 box1">
+                  <div class="box_content">
+                      <h5>Adidas Tango Soccer Ball</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8f.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box6">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box7 box1">
+                  <div class="box_content">
+                      <h5>CamelBak Hydration Packs</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8g.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box7">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+      
+              <div class="box8 box1">
+                  <div class="box_content">
+                      <h5>Specialized Allez Road Bike</h5>
+                  <div class="box1_img" style="background-image: url(pictures/8h.jpg);"></div>
+                  <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#box8">
+                    Add to Chart
+                  </button>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white">
+      <div class="block1 container-fluid text-md-left">
+        <div class="row text-center text-md-left pb-3">
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              E-Shop
+            </h5>
+            <p>
+              <a href="about.html" class="text-white" style="text-decoration: none;">About</a>
+            </p>
+            <p>
+              <a href="contact.html" class="text-white" style="text-decoration: none;">Write about us</a>
+            </p>
+            <p>
+              <a href="questions.html" class="text-white" style="text-decoration: none;">FAQs</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Terms and Conditions</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Footer menu
+            </h5>
+            <p>
+              <a href="shipping_policy.html" class="text-white" style="text-decoration: none;">Shipping policy</a>
+            </p>
+            <p>
+              <a href="terms.html" class="text-white" style="text-decoration: none;">Terms of service</a>
+            </p>
+            <p>
+              <a href="PrivacyPolicy.html" class="text-white" style="text-decoration: none;">Privacy policy</a>
+            </p>
+            <p>
+              <a href="RefundPolicy.html" class="text-white" style="text-decoration: none;">Refund policy</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Useful Links
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Shipping rates</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Help</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Contact Info
+            </h5>
+            <div class="goodboy">
+              <p><i class="fas fa-home me-2"></i>Pakistan</p>
+              <p><i class="fas fa-envelope me-2"></i>Shop123@email.com</p>
+              <p><i class="fas fa-phone me-2"></i>+921234567890</p>
+              <p><i class="fas fa-print me-2"></i>+042-123456</p>
+            </div>
+          </div>
+        </div>
+        <hr class="featurette-divider m-auto">
+        <div class="row block2 text-light text-center py-3">
+          <p>
+            <a href="#" class="text-light mx-2">Conditions of Use</a>
+            <a href="#" class="text-light mx-2">Privacy Notice</a>
+            <a href="#" class="text-light mx-2">Consumer Health Data Privacy Disclosure</a>
+            <a href="#" class="text-light mx-2">Your Ads Privacy Choices</a>
+            </p>
+            <p>© 2024-2025, E-Shop.com.All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
+    </script>
+  </body>
+</html>
