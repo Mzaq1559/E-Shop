@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+    class="navbar navbar-expand-lg navbar_background" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#"><img src="pictures/logo.jpg"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="website.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                More
+              </a>
+              <ul class="dropdown-menu mp">
+                <li><a class="dropdown-item" href="#"></a>Consumer electronics.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Health and beauty.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Food and beverage.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Furniture and decor.</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Clothes and Cosmetics</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Books, movies, music, and games</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#"></a>Sports items</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="questions.html">FAQs</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signInModal">Login</button>
+          <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</button>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">
+              Search
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MODALS -->
+
+    <!-- SIGN IN MODAL -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signInModalLabel">Login to E-Shop</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="emailSignIn" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailSignIn" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="passwordSignIn" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordSignIn" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="btn btn-outline-dark w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nameSignUp" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="nameSignUp" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="emailSignUp" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailSignUp" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="passwordSignUp" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordSignUp" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="btn btn-outline-dark w-100">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+        <h1 class="headin4 mt-3">Refund Policy</h1>
+        <div class="row text-start">
+          <div class="row p-auto mt-3 mb-3">
+            <p class="m-auto mt-2 pt-3">
+              We provide an easy, reliable, and speedy service for all applicable products under our manufacturer's warranty.Warranty can be claimed on products bought through eshopnow.pk. Any other purchasers should contact their line of sales for their claim settlement. You should provide all relevant order information such as warranty cards, packaging, invoices, receipts, etc.
+            </p>
+            <br>
+            <p class="m-auto mt-2 pt-3">
+              All Warranties are claimable 1 time against 1 purchase. When your first claim is settled, all previous warranties are null & void from that point on.All Warranties are non-transferable & can be claimed only by the original buyer. If you have bought a used item from any person who bought it from us, consider the warranty to be void. All warranty claims take 7 to 10 days to process.
+            </p>
+          </div>
+          <div class="row p-auto mt-3 mb-3">
+            <h4>THE WARRANTY DOES NOT COVER:</h4>
+            <ol>
+              <li>Artificial damage such as charging using harmful power levels or using unapproved accessories.</li>
+              <li>Any defects or damages caused by improper use include but are not limited to the operation which doesn’t comply with the warranty or notes shown in the product specifications. For example, disassembling the sealed product shell will void the warranty.</li>
+              <li>Any defects or damage caused by other behaviours which cannot be controlled by eshopnow.pk</li>
+              <li>Ordinary wear and tear.</li>
+              <li>Products not purchased from eshopnow.pk</li>
+              <li>Product not up to customer’s expectations.</li>
+              <li>Products having fitting issues. (Earbuds)</li>
+              <li>Software issues in smartwatches.</li>
+            </ol>
+          </div>
+          <div class="row p-auto mt-3 mb-3">
+            <h4>HOW TO OBTAIN WARRANTY SERVICE:</h4>
+            <ol>
+              <li>A Warranty request must be processed to eshopnow.pk within Warranty Period from the date of receipt of shipment. To request a Warranty contact eshopnow.pk Service Team at eshopnow.pk@gmail.com.</li>
+              <li>The cost of return shipping will be borne by the customer.</li>
+              <li>The Order number and necessary contact information (including but not limited to name, phone numbers, purchased date, etc.) must be clearly written on paper by the customer and must be included along with the returned product.</li>
+              <li>The returned product must be in good physical condition (not physically broken or damaged).</li>
+              <li>All accessories and box originally included with your purchase must be included with your return.</li>
+              <li>If you return a product to eshopnow.pk, (a) without a Warranty Request (b) without all parts included in the original package (c) without original Invoice, eshopnow.pk retains the right to refuse delivery of such return.</li>
+            </ol>
+          </div>
+          <div class="row p-auto mt-3 mb-3">
+            <h4>IF THE PRODUCT SENT BACK DOESN’T TURN OUT TO BE FAULTY:</h4>
+            <p class="m-auto mt-2 pt-3">
+              We recommend you to ensure that product you are sending back is faulty. Try it with different devices. You may call our representatives who will help you reset the device where applicable. If the product turns out to be faulty, you can ship the product to us to claim the warranty by paying one-way shipping charges (Whatever amount the logistic company charges you). If you send the product within warranty time and the product is declared faulty by our QC Team, we will send you a replacement product free of charge.
+            </p>
+            <ol>
+              <li>This limited warranty is only valid in Pakistan and covers accessories sold with official warranty on eshopnow.pk</li>
+              <li>company may conduct diagnostic tests on customers‘ products to identify the causes of failures/defects. Before returning any unit for service, the customer should back up data and remove any confidential and/or personal information from the product. eshopnow.pk is not responsible for damage or loss of any program, data, or removable storage media.</li>
+              <li>Prior to contacting an eshopnow.pk service agent, please ensure the following information is at hand:
+                <ul>
+                  <li>Model, serial number, and product packaging.</li>
+                  <li>Customer’s full address and contact information.</li>
+                  <li>Purchase order number generated by eshopnow.pk.</li>
+                  <li>This warranty does not cover the following cases:</li>
+                </ul>
+              </li>
+              <li>This warranty does not cover the following cases:
+                <ul>
+                  <li>If the product is not compatible with the customer’s device. The customer is responsible for ensuring that the product they’re buying is compatible with whatever device they’re buying it for. Incompatibility with a specific device (phone/laptop/car/TV/Google Home etc) will not be considered a defect.</li>
+                  <li>Warranty does not cover natural wear & tear, usage under extreme conditions, damage due to improper care (accident, misuse, or negligence), and damage caused by natural disasters such as floods, fires, or earthquakes.</li>
+                  <li>If the product serial number or warranty seal is illegible or has been removed, erased, defaced, altered, and/or tampered with. If any accessory or external part of the product is missing.</li>
+                  <li>If any damage occurs in/on the outer surface of the product, including but not limited to cracks, dents, or scratches on the exterior cases, screens, camera lenses, buttons, and other attachments.</li>
+                  <li>Power Bank cells can become weaker after multiple cycles of use, charging output can get decreased which is normal for any rechargeable battery, So it is subject to get lower over the passage of time, and is not covered in Warranty.</li>
+                  <li>General maintenance, cleaning, application update/installation, product demonstration, or any other service other than repair/replacement;</li>
+                  <li>Any other circumstances that are contradictory or are not in compliance with business ethics.</li>
+                </ul>
+              </li>
+              <li>Manufacturing warranty applies on:
+                <ul>
+                  <li>Manufacturing defects in materials and workmanship of the product. This warranty applies when the product is used under normal conditions and for the purpose for which the product was designed.</li>
+                  <li>The company will determine whether a product is “Out of Warranty” at the company’s discretion according to the standards listed below.
+                    <ul>
+                      <li>Violations against warranty, including but not limited to customer-induced damage, such as self-repairs, exposure to water, damage caused by misuse, flashing ROM, alternation, failure to comply with product manual, and so on.</li>
+                      <li>Invalid warranty</li>
+                      <li>Expired warranty</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+          </ol>
+          </div>
+          <div class="row p-auto mt-3 mb-3">
+            <h4>WARRANTY ON IMPORTED PRODUCTS</h4>
+            <p class="m-auto mt-2 pt-3">
+              We have a 7 day warranty policy on all imported products, no return policy. Which means you have 7 days after receiving your item to request a warranty. 7 days warranty include repair warranty, no replacement or exchange in case of any fault.
+            </p>
+            <p class="m-auto mt-2 pt-3">
+              To be eligible for a warranty, your item must be in the same condition that you received it or unused, with tags, and in its original packaging. You’ll also need the receipt or proof of purchase.<br>
+              You can always contact us for any warranty question at eshopnow.pk@gmail.com. Or on our WhatsApp number 0322-2221518. 
+              To claim a warranty, you can contact us at eshopnow.pk@gmail.com. If your claim is accepted, we’ll tell you instructions on how and where to send your package. The cost of return shipping will be borne by the customer. Items sent back to us without first requesting a claim will not be accepted.<br>
+            </p>
+          </div>
+        </div>
+        <div class="row ship">
+            <div class="col mt-4 mb-3 mt-3 p-auto">
+                <i class="fas fa-2x fa-box"></i>
+                <h4>FREE SHIPPING</h4>
+                <p>Free shipping on orders above 2500</p>
+            </div>
+            <div class="col mt-4 mb-3 mt-3 p-auto">
+                <i class="fas fa-2x fa-phone"></i>
+                <h4>CUSTOMER SERVICE</h4>
+                <p>We are avaliable from Monday to Saturday to answer your questions</p>
+            </div>
+            <div class="col mt-4 mb-3 mt-3 p-auto">
+                <i class="fas fa-2x fa-key"></i>
+                <h4>SECURE PAYMENT</h4>
+                <p>Your payment information is processed securely</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white">
+      <div class="block1 container-fluid text-md-left">
+        <div class="row text-center text-md-left pb-3">
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              E-Shop
+            </h5>
+            <p>
+              <a href="about.html" class="text-white" style="text-decoration: none;">About</a>
+            </p>
+            <p>
+              <a href="contact.html" class="text-white" style="text-decoration: none;">Write about us</a>
+            </p>
+            <p>
+              <a href="questions.html" class="text-white" style="text-decoration: none;">FAQs</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Terms and Conditions</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Footer menu
+            </h5>
+            <p>
+              <a href="shipping_policy.html" class="text-white" style="text-decoration: none;">Shipping policy</a>
+            </p>
+            <p>
+              <a href="terms.html" class="text-white" style="text-decoration: none;">Terms of service</a>
+            </p>
+            <p>
+              <a href="PrivacyPolicy.html" class="text-white" style="text-decoration: none;">Privacy policy</a>
+            </p>
+            <p>
+              <a href="RefundPolicy.html" class="text-white" style="text-decoration: none;">Refund policy</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Useful Links
+            </h5>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Shipping rates</a>
+            </p>
+            <p>
+              <a href="#" class="text-white" style="text-decoration: none;">Help</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3 text-start goodboy">
+            <h5 class="mb-4 font-weight-bold text-warning">
+              Contact Info
+            </h5>
+            <div class="goodboy">
+              <p><i class="fas fa-home me-2"></i>Pakistan</p>
+              <p><i class="fas fa-envelope me-2"></i>Shop123@email.com</p>
+              <p><i class="fas fa-phone me-2"></i>+921234567890</p>
+              <p><i class="fas fa-print me-2"></i>+042-123456</p>
+            </div>
+          </div>
+        </div>
+        <hr class="featurette-divider m-auto">
+        <div class="row block2 text-light text-center py-3">
+          <p>
+            <a href="#" class="text-light mx-2">Conditions of Use</a>
+            <a href="#" class="text-light mx-2">Privacy Notice</a>
+            <a href="#" class="text-light mx-2">Consumer Health Data Privacy Disclosure</a>
+            <a href="#" class="text-light mx-2">Your Ads Privacy Choices</a>
+            </p>
+            <p>© 2024-2025, E-Shop.com.All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

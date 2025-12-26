@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar img {
+    height: 3.2rem;
+}
+
+.navbar_background {
+    background-color: #404040;
+}
+
+.navbar a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.mp {
+    width: max-content;
+    padding: 1rem;
+}
+
+/* Footer */
+footer p {
+    height: 22px; 
+    overflow: hidden;
+    margin: 0;
+}
+
+.goodboy p {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ffc107;
+}
+
+.block1 {
+    background-color: #3c3e3e;
+}
+
+.block2 {
+    background-color: #4e4f4f;
+}
+
+.block2 p {
+    font-size: 0.8rem;
+    font-weight: 450;
+}
+
+/* Home Section */
+.shop_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 16px;
+    padding: 1rem;
+    background-color: #c2c7ca;
+}
+
+.box {
+    padding: 15px 8px 12px; 
+    border: 2px solid black;
+    min-height: 330px; 
+    width: 23%; 
+    background-color: #ffffff;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.box_img {
+    height: 220px;
+    background-size: cover;
+    background-position: center; 
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.box_content h5 {
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Product Card */
+.box1 {
+    padding: 10px; 
+    border: 1px solid #ddd;
+    min-height: 350px; 
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box1:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.box1_img {
+    height: 180px;
+    background-size: cover;
+    background-position: center; 
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .box, .box1 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .box, .box1 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .box, .box1 {
+        width: 90%; 
+    }
+}
