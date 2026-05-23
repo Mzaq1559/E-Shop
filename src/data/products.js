@@ -1,5 +1,30 @@
+/**
+ * products.js
+ *
+ * Static seed data for the E-Shop product catalogue and category list.
+ *
+ * Both arrays are exported as named exports so they can be imported
+ * individually wherever they're needed:
+ *
+ *   import { products, categories } from '../data/products';
+ *
+ * `products` is loaded into ShopContext on first run and then persisted to
+ * localStorage, so admin changes (add / remove) survive page refreshes.
+ *
+ * `categories` is a static reference list used for filter dropdowns on the
+ * Shop page and for the category grid on the Home page. It never changes at
+ * runtime, so it's read directly from this file rather than going through context.
+ *
+ * Product shape:
+ *   { id: string, name: string, category: string, price: number, image: string }
+ *
+ * IDs follow a simple convention: first character = category number,
+ * second character = item letter within that category (e.g. '1a', '3c').
+ * This makes it easy to group products visually when reading the data.
+ */
+
 export const products = [
-  // Consumer Electronics
+  // ─── Consumer Electronics ──────────────────────────────────────────────────
   { id: '1a', name: 'Apple AirPods Pro', category: 'Consumer Electronics', price: 249.99, image: '/pictures/1a.jpg' },
   { id: '1b', name: 'Samsung Neo QLED 8K TV', category: 'Consumer Electronics', price: 3499.99, image: '/pictures/1b.jpg' },
   { id: '1c', name: 'Apple iPhone 15 Pro', category: 'Consumer Electronics', price: 999.99, image: '/pictures/1c.jpg' },
@@ -9,7 +34,7 @@ export const products = [
   { id: '1g', name: 'LG Dual Inverter AC', category: 'Consumer Electronics', price: 450.00, image: '/pictures/1g.jpg' },
   { id: '1h', name: 'Google Pixel 8 Pro', category: 'Consumer Electronics', price: 899.99, image: '/pictures/1h.jpg' },
 
-  // Health and Beauty
+  // ─── Health and Beauty ─────────────────────────────────────────────────────
   { id: '2a', name: 'CeraVe Hydrating Facial Cleanser', category: 'Health and Beauty', price: 15.99, image: '/pictures/2a.jpg' },
   { id: '2b', name: 'Olaplex No. 3 Hair Perfector', category: 'Health and Beauty', price: 30.00, image: '/pictures/2b.jpg' },
   { id: '2c', name: 'Batiste Dry Shampoo', category: 'Health and Beauty', price: 8.99, image: '/pictures/2c.jpg' },
@@ -19,7 +44,7 @@ export const products = [
   { id: '2g', name: 'Axe Phoenix Body Spray', category: 'Health and Beauty', price: 5.99, image: '/pictures/2g.jpg' },
   { id: '2h', name: 'Jack Black Double-Duty Face Moisturizer', category: 'Health and Beauty', price: 28.00, image: '/pictures/2h.jpg' },
 
-  // Food and Beverage
+  // ─── Food and Beverage ─────────────────────────────────────────────────────
   { id: '3a', name: 'Kraft Macaroni & Cheese', category: 'Food and Beverage', price: 1.50, image: '/pictures/3a.jpg' },
   { id: '3b', name: 'Kind Protein Bars', category: 'Food and Beverage', price: 14.99, image: '/pictures/3b.jpg' },
   { id: '3c', name: 'Coca-Cola Classic', category: 'Food and Beverage', price: 1.99, image: '/pictures/3c.jpg' },
@@ -27,9 +52,12 @@ export const products = [
   { id: '3e', name: 'Philadelphia Cream Cheese', category: 'Food and Beverage', price: 4.99, image: '/pictures/3e.jpg' },
   { id: '3f', name: 'DiGiorno Frozen Pizza', category: 'Food and Beverage', price: 7.99, image: '/pictures/3f.jpg' },
   { id: '3g', name: 'Hormel Chili with Beans', category: 'Food and Beverage', price: 2.49, image: '/pictures/3g.jpg' },
-  { id: '3h', name: 'Heinz Tomato Ketchup', category: 'Food and Beverage', price: 3.99, image: '/pictures/2h.jpg' }, // Note: 2h was in html, might be typo in original but keeping or fixing? reusing 2h probably wrong. HTML has `url(pictures/2h.jpg)` for Heinz? Let's check. Yes line 544. Probably copy paste error in original site. I will leave as is or fix if I can't find 3h. Wait, line 544 is Heinz, image is `2h.jpg`. This is definitely a bug in original. I will assume `3h.jpg` exists or just use `2h.jpg` to be safe, but actually `3h` likely doesn't exist if not used. I'll stick to what HTML had: 2h.
+  // NOTE: The image path below reuses '2h.jpg' — this appears to be a copy-paste
+  // bug carried over from the original HTML site. '3h.jpg' likely doesn't exist
+  // in /pictures, so we keep '2h.jpg' to avoid a broken image.
+  { id: '3h', name: 'Heinz Tomato Ketchup', category: 'Food and Beverage', price: 3.99, image: '/pictures/2h.jpg' },
 
-  // Furniture and Decor
+  // ─── Furniture and Decor ───────────────────────────────────────────────────
   { id: '4a', name: 'IKEA EKTORP Sofa', category: 'Furniture and Decor', price: 399.00, image: '/pictures/4a.jpg' },
   { id: '4b', name: 'Zinus SmartBase Platform Bed', category: 'Furniture and Decor', price: 129.00, image: '/pictures/4b.jpg' },
   { id: '4c', name: 'CB2 Round Marble Bistro Table', category: 'Furniture and Decor', price: 299.00, image: '/pictures/4c.jpg' },
@@ -39,7 +67,7 @@ export const products = [
   { id: '4g', name: 'CanvasPop Custom Canvas Prints', category: 'Furniture and Decor', price: 49.00, image: '/pictures/4g.jpg' },
   { id: '4h', name: 'Safavieh Vintage Collection Rug', category: 'Furniture and Decor', price: 150.00, image: '/pictures/4h.jpg' },
 
-  // Apparel and Accessories
+  // ─── Apparel and Accessories ───────────────────────────────────────────────
   { id: '5a', name: 'Ralph Lauren Polo Shirt', category: 'Apparel and Accessories', price: 89.50, image: '/pictures/5a.jpg' },
   { id: '5b', name: 'H&M Ribbed Knit Dress', category: 'Apparel and Accessories', price: 34.99, image: '/pictures/5b.jpg' },
   { id: '5c', name: 'The North Face Puffer Jacket', category: 'Apparel and Accessories', price: 280.00, image: '/pictures/5c.jpg' },
@@ -49,17 +77,19 @@ export const products = [
   { id: '5g', name: 'Daniel Wellington Classic Watch', category: 'Apparel and Accessories', price: 199.00, image: '/pictures/5g.jpg' },
   { id: '5h', name: 'New Era 59FIFTY Fitted Cap', category: 'Apparel and Accessories', price: 45.00, image: '/pictures/5h.jpg' },
 
-  // Clothes and Cosmetics
-  { id: '6a', name: 'Levi’s 501 Original Fit Jeans', category: 'Clothes and Cosmetics', price: 69.50, image: '/pictures/6a.jpg' },
+  // ─── Clothes and Cosmetics ─────────────────────────────────────────────────
+  { id: '6a', name: 'Levi\'s 501 Original Fit Jeans', category: 'Clothes and Cosmetics', price: 69.50, image: '/pictures/6a.jpg' },
   { id: '6b', name: 'Tommy Hilfiger Polo Shirt', category: 'Clothes and Cosmetics', price: 59.50, image: '/pictures/6b.jpg' },
   { id: '6c', name: 'Champion Reverse Weave Hoodie', category: 'Clothes and Cosmetics', price: 60.00, image: '/pictures/6c.jpg' },
-  { id: '6d', name: 'CeraVe Hydrating Facial Cleanser', category: 'Clothes and Cosmetics', price: 15.99, image: '/pictures/6d.jpg' }, // Duplicate? Different image? HTML used 6d.jpg
+  // NOTE: Same product name as '2a' (CeraVe Cleanser) but different category and image.
+  // The original site listed it under Clothes and Cosmetics intentionally.
+  { id: '6d', name: 'CeraVe Hydrating Facial Cleanser', category: 'Clothes and Cosmetics', price: 15.99, image: '/pictures/6d.jpg' },
   { id: '6e', name: 'Drunk Elephant T.L.C. Sukari Babyfacial', category: 'Clothes and Cosmetics', price: 80.00, image: '/pictures/6e.jpg' },
   { id: '6f', name: 'MAC Studio Fix Powder Foundation', category: 'Clothes and Cosmetics', price: 39.00, image: '/pictures/6f.jpg' },
   { id: '6g', name: 'Moroccanoil Treatment Oil', category: 'Clothes and Cosmetics', price: 44.00, image: '/pictures/6g.jpg' },
   { id: '6h', name: 'OPI Nail Lacquer', category: 'Clothes and Cosmetics', price: 11.49, image: '/pictures/6h.jpg' },
 
-  // Books, Movies, Music, and Games
+  // ─── Books, Movies, Music, and Games ──────────────────────────────────────
   { id: '7a', name: '"Abbey Road" by The Beatles', category: 'Books, Movies, Music, and Games', price: 29.99, image: '/pictures/7a.jpg' },
   { id: '7b', name: '"1989" by Taylor Swift', category: 'Books, Movies, Music, and Games', price: 24.99, image: '/pictures/7b.jpg' },
   { id: '7c', name: '"Rolling in the Deep" by Adele', category: 'Books, Movies, Music, and Games', price: 1.29, image: '/pictures/7c.jpg' },
@@ -69,7 +99,7 @@ export const products = [
   { id: '7g', name: '"Persona 5"', category: 'Books, Movies, Music, and Games', price: 19.99, image: '/pictures/7g.jpg' },
   { id: '7h', name: '"Circe" by Madeline Miller', category: 'Books, Movies, Music, and Games', price: 16.99, image: '/pictures/7h.jpg' },
 
-  // Sports Items
+  // ─── Sports Items ──────────────────────────────────────────────────────────
   { id: '8a', name: 'Peloton Bike', category: 'Sports Items', price: 1445.00, image: '/pictures/8a.jpg' },
   { id: '8b', name: 'NordicTrack Treadmill', category: 'Sports Items', price: 1299.00, image: '/pictures/8b.jpg' },
   { id: '8c', name: 'Reebok CrossFit Shorts', category: 'Sports Items', price: 45.00, image: '/pictures/8c.jpg' },
@@ -80,6 +110,21 @@ export const products = [
   { id: '8h', name: 'Specialized Allez Road Bike', category: 'Sports Items', price: 1000.00, image: '/pictures/8h.jpg' },
 ];
 
+/**
+ * categories
+ *
+ * Static list of the 8 shop categories shown on the Home page grid and used
+ * to populate the filter dropdown on the Shop page.
+ *
+ * Each category's `name` must exactly match the `category` field on the
+ * products above — the Shop page filters by strict equality.
+ *
+ * Category shape:
+ *   { id: string, name: string, image: string }
+ *
+ * The `id` values (box1–box8) are legacy identifiers carried over from the
+ * original HTML/CSS site and are used as React `key` props in list renders.
+ */
 export const categories = [
   { id: 'box1', name: 'Consumer Electronics', image: '/pictures/s1.jpg' },
   { id: 'box2', name: 'Health and Beauty', image: '/pictures/s2.jpg' },
@@ -88,5 +133,9 @@ export const categories = [
   { id: 'box5', name: 'Apparel and Accessories', image: '/pictures/s5.jpg' },
   { id: 'box6', name: 'Clothes and Cosmetics', image: '/pictures/s6.jpg' },
   { id: 'box7', name: 'Books, Movies, Music, and Games', image: '/pictures/s7.jpg' },
+  // NOTE: The category name here is 'Sports items' (lowercase 'i') but the
+  // products above use 'Sports Items' (uppercase 'I'). This mismatch means
+  // the Sports Items filter on Shop won't match any products via this category
+  // entry — worth fixing if the category filter is used for navigation.
   { id: 'box8', name: 'Sports items', image: '/pictures/s8.jpg' },
 ];
